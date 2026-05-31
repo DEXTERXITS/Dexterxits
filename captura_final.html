@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Config Grátis — Dexter XIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#000;color:#fff;font-family:'Exo 2',sans-serif;overflow-x:hidden}
+.lp{max-width:480px;margin:0 auto}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
+@keyframes glow{0%,100%{text-shadow:0 0 10px rgba(232,0,14,.5)}50%{text-shadow:0 0 30px rgba(232,0,14,1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes shine{0%{left:-100%}100%{left:200%}}
+@keyframes slide-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes countdown-pulse{0%,100%{color:#fff}50%{color:#e8000e}}
+
+.ann{background:#e8000e;padding:9px;text-align:center;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;animation:pulse 2s infinite}
+
+.hero{padding:28px 20px 0;text-align:center}
+.hero-badge{display:inline-block;background:rgba(232,0,14,.12);border:1px solid rgba(232,0,14,.4);color:#e8000e;font-size:10px;letter-spacing:3px;padding:5px 14px;border-radius:2px;text-transform:uppercase;margin-bottom:14px;animation:float 3s ease-in-out infinite}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:42px;line-height:.95;color:#fff;margin-bottom:10px;animation:glow 2.5s ease-in-out infinite}
+.hero-title span{color:#e8000e;display:block;font-size:50px}
+.hero-sub{font-size:13px;color:#888;line-height:1.7;margin-bottom:20px;padding:0 10px}
+.hero-sub em{color:#fff;font-style:normal;font-weight:700}
+
+.proof{display:flex;justify-content:center;gap:20px;margin:0 20px 24px;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:4px;padding:14px}
+.proof-item{text-align:center}
+.proof-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:#e8000e;line-height:1}
+.proof-label{font-size:10px;color:#555;text-transform:uppercase;letter-spacing:1px}
+
+.wg{padding:0 20px 20px}
+.wg-title{font-size:10px;letter-spacing:3px;color:#e8000e;text-transform:uppercase;text-align:center;margin-bottom:14px;display:block}
+.wg-item{background:#080808;border-left:3px solid #e8000e;border-radius:0 4px 4px 0;padding:13px 14px;margin-bottom:8px;display:flex;align-items:flex-start;gap:10px;animation:slide-up .4s ease forwards}
+.wg-icon{font-size:20px;flex-shrink:0}
+.wg-text strong{color:#fff;display:block;font-size:13px;margin-bottom:2px}
+.wg-text p{font-size:12px;color:#666;line-height:1.5}
+.wg-free{background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.2);color:#00e676;font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;letter-spacing:1px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
+
+.urgency{margin:0 20px 20px;background:#0a0000;border:1px solid rgba(232,0,14,.25);border-radius:4px;padding:16px;text-align:center}
+.urg-label{font-size:10px;letter-spacing:3px;color:#e8000e;text-transform:uppercase;margin-bottom:10px;display:block}
+.timer{display:flex;justify-content:center;gap:8px;align-items:flex-start}
+.timer-block{text-align:center}
+.timer-num{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#fff;line-height:1;background:#0f0f0f;border:1px solid #1a1a1a;border-radius:4px;width:56px;display:flex;align-items:center;justify-content:center;animation:countdown-pulse 1s ease-in-out infinite}
+.timer-sep{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#e8000e;line-height:1;padding-top:0}
+.timer-label{font-size:9px;color:#444;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.urg-text{font-size:11px;color:#555;margin-top:10px;line-height:1.6}
+
+.form-section{padding:0 20px 24px}
+.form-box{background:#080808;border:1px solid rgba(232,0,14,.3);border-radius:6px;padding:22px;position:relative;overflow:hidden}
+.form-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:#e8000e}
+.form-title{font-family:'Bebas Neue',sans-serif;font-size:24px;color:#fff;text-align:center;margin-bottom:4px}
+.form-sub{font-size:11px;color:#555;text-align:center;margin-bottom:18px;line-height:1.6}
+.form-group{margin-bottom:12px}
+.form-group label{font-size:10px;letter-spacing:2px;color:#555;text-transform:uppercase;display:block;margin-bottom:5px}
+.form-group input{width:100%;background:#0f0f0f;border:1px solid #222;border-radius:3px;padding:12px 14px;font-size:13px;color:#fff;font-family:'Exo 2',sans-serif;outline:none;transition:border-color .2s}
+.form-group input:focus{border-color:rgba(232,0,14,.5)}
+.form-group input::placeholder{color:#333}
+.btn-capture{display:block;width:100%;background:#e8000e;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;padding:17px;border-radius:3px;text-align:center;border:none;cursor:pointer;margin-top:16px;position:relative;overflow:hidden;transition:background .2s}
+.btn-capture::before{content:'';position:absolute;top:-50%;left:-100%;width:60%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transform:skewX(-20deg);animation:shine 2.5s ease-in-out infinite}
+.btn-capture:hover{background:#c0000c}
+.btn-capture:active{transform:scale(.98)}
+.form-privacy{font-size:10px;color:#333;text-align:center;margin-top:8px}
+
+.teaser{padding:0 20px 32px}
+.teaser-title{font-size:10px;letter-spacing:3px;color:#444;text-transform:uppercase;text-align:center;margin-bottom:12px;display:block}
+.teaser-preview{background:#050505;border:1px solid #111;border-radius:6px;padding:16px;text-align:center}
+.teaser-blur{filter:blur(6px);font-size:13px;color:#ccc;margin:6px 0;pointer-events:none;user-select:none}
+.teaser-cta{font-size:11px;color:#e8000e;font-weight:700;margin-top:8px}
+
+.footer{background:#000;padding:20px;text-align:center;border-top:1px solid #0d0d0d}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;letter-spacing:3px}
+.footer-brand span{color:#e8000e}
+.footer-sub{font-size:10px;color:#2a2a2a;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="lp">
+
+<div class="ann">&#9889; configs gr&#225;tis por tempo limitado &#9889;</div>
+
+<div class="hero">
+  <div class="hero-badge">exclusivo e gr&#225;tis</div>
+  <div class="hero-title">
+    sua sensi perfeita
+    <span>em 60 segundos</span>
+  </div>
+  <div class="hero-sub">
+    Receba a <em>configura&#231;&#227;o exata de sensibilidade</em> pro seu celular &#8212; usada pelos tops do cen&#225;rio. Personalizada pra voc&#234;, <em>de gra&#231;a.</em>
+  </div>
+</div>
+
+<div class="proof">
+  <div class="proof-item"><div class="proof-num">3.8K</div><div class="proof-label">seguidores</div></div>
+  <div class="proof-item"><div class="proof-num">3+</div><div class="proof-label">anos no cen&#225;rio</div></div>
+  <div class="proof-item"><div class="proof-num">327K</div><div class="proof-label">views</div></div>
+</div>
+
+<div class="wg">
+  <span class="wg-title">o que voc&#234; vai receber gr&#225;tis</span>
+  <div class="wg-item">
+    <div class="wg-icon">&#127919;</div>
+    <div class="wg-text">
+      <strong>Sensi personalizada pro seu celular <span class="wg-free">gr&#225;tis</span></strong>
+      <p>Configura&#231;&#227;o exata de mira, c&#226;mera e giro &#8212; feita especialmente pro modelo do seu aparelho.</p>
+    </div>
+  </div>
+  <div class="wg-item">
+    <div class="wg-icon">&#9889;</div>
+    <div class="wg-text">
+      <strong>Config pro de headshot <span class="wg-free">gr&#225;tis</span></strong>
+      <p>As mesmas configs usadas por jogadores no Top Global. Ativa e j&#225; sente a diferen&#231;a.</p>
+    </div>
+  </div>
+  <div class="wg-item">
+    <div class="wg-icon">&#128081;</div>
+    <div class="wg-text">
+      <strong>Acesso ao grupo VIP <span class="wg-free">gr&#225;tis</span></strong>
+      <p>Configs atualizadas a cada patch, dicas de rank e suporte direto com o Dexter.</p>
+    </div>
+  </div>
+</div>
+
+<div class="urgency">
+  <span class="urg-label">essa oferta expira em</span>
+  <div class="timer">
+    <div class="timer-block"><div class="timer-num" id="hours">23</div><div class="timer-label">horas</div></div>
+    <div class="timer-sep">:</div>
+    <div class="timer-block"><div class="timer-num" id="mins">59</div><div class="timer-label">min</div></div>
+    <div class="timer-sep">:</div>
+    <div class="timer-block"><div class="timer-num" id="secs">47</div><div class="timer-label">seg</div></div>
+  </div>
+  <div class="urg-text">Apenas <strong style="color:#fff">47 vagas</strong> dispon&#237;veis hoje. Ap&#243;s esgotar, a sensi volta a ser paga.</div>
+</div>
+
+<div class="form-section">
+  <div class="form-box">
+    <div class="form-title">quero minha config gr&#225;tis</div>
+    <div class="form-sub">preencha abaixo e receba no seu whatsapp em minutos</div>
+
+    <div class="form-group">
+      <label>seu nome</label>
+      <input type="text" id="nome" placeholder="Ex: Jo&#227;o Silva">
+    </div>
+    <div class="form-group">
+      <label>whatsapp com ddd</label>
+      <input type="tel" id="wpp" placeholder="Ex: (11) 99999-9999">
+    </div>
+    <div class="form-group">
+      <label>seu email</label>
+      <input type="email" id="email" placeholder="Ex: joao@email.com">
+    </div>
+    <div class="form-group">
+      <label>modelo do seu celular</label>
+      <input type="text" id="celular" placeholder="Ex: Samsung A52, iPhone 11, Moto G9...">
+    </div>
+
+    <button class="btn-capture" id="btnCapture" onclick="enviar()">
+      receber minha config gr&#225;tis agora &#128293;
+    </button>
+    <div class="form-privacy">&#128274; seus dados est&#227;o seguros. n&#227;o enviamos spam.</div>
+  </div>
+</div>
+
+<div class="teaser">
+  <span class="teaser-title">quem usa a sensi + painel juntos</span>
+  <div class="teaser-preview">
+    <div style="font-size:12px;color:#555;margin-bottom:6px">ap&#243;s receber sua config voc&#234; desbloqueia</div>
+    <div class="teaser-blur">desconto exclusivo no painel + acesso imediato</div>
+    <div class="teaser-blur">combo sensi + painel por pre&#231;o especial</div>
+    <div class="teaser-cta">preencha o formul&#225;rio para ver &#128071;</div>
+  </div>
+</div>
+
+
+<div style="padding:0 20px 32px">
+  <span style="font-size:10px;letter-spacing:3px;color:#e8000e;text-transform:uppercase;text-align:center;display:block;margin-bottom:16px">turbine sua sensi com o painel</span>
+  <p style="font-size:12px;color:#666;text-align:center;margin-bottom:16px;line-height:1.6">Sua sensi j&#225; vai estar perfeita &#8212; imagina com o painel junto? &#128293;</p>
+
+  <!-- BASICO -->
+  <div style="background:#080808;border:1px solid #1c1c1c;border-radius:8px;margin-bottom:12px;overflow:hidden;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+    <div style="height:90px;background:linear-gradient(135deg,#0d0000,#1c0000);position:relative;display:flex;align-items:center;padding:0 16px;overflow:hidden">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#e8000e"></div>
+      <div style="position:absolute;right:-5px;bottom:-5px;font-size:65px;opacity:.08">&#128293;</div>
+      <div style="position:relative;z-index:1">
+        <div style="font-size:9px;letter-spacing:3px;color:#e8000e;text-transform:uppercase;margin-bottom:3px">Dexter XIT &#8212; Painel</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:34px;color:#fff;line-height:.9">B&#193;SICO</div>
+        <div style="font-size:10px;color:#555;letter-spacing:1px;margin-top:4px;text-transform:uppercase">acesso permanente</div>
+      </div>
+    </div>
+    <div style="padding:14px 16px">
+      <ul style="list-style:none;margin-bottom:12px">
+        <li style="font-size:12px;color:#888;padding:3px 0;display:flex;align-items:center;gap:6px"><span style="color:#e8000e;font-weight:700">&#10003;</span>Painel inicial incluso</li>
+        <li style="font-size:12px;color:#888;padding:3px 0;display:flex;align-items:center;gap:6px"><span style="color:#e8000e;font-weight:700">&#10003;</span>Mira otimizada para FF</li>
+        <li style="font-size:12px;color:#888;padding:3px 0;display:flex;align-items:center;gap:6px"><span style="color:#e8000e;font-weight:700">&#10003;</span>Ativa&#231;&#227;o imediata</li>
+      </ul>
+      <div style="font-size:12px;color:#333;text-decoration:line-through;margin-bottom:2px">R&#36;9,90</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:#e8000e;line-height:1;margin-bottom:4px">R&#36;5,90</div>
+      <div style="background:rgba(0,230,118,.08);border:1px solid rgba(0,230,118,.2);color:#00e676;font-size:10px;font-weight:700;padding:3px 8px;border-radius:2px;display:inline-block;margin-bottom:12px;text-transform:uppercase">&#9854;&#65039; Permanente &#8212; pague uma vez</div>
+      <a href="https://pay.cakto.com.br/3xhiycz_899593" style="display:block;width:100%;background:#e8000e;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;padding:13px;border-radius:3px;text-align:center;text-decoration:none">QUERO O B&#193;SICO</a>
+    </div>
+  </div>
+
+  <!-- STARTER RECOMENDADO -->
+  <div style="background:#070000;border:1px solid #e8000e;border-radius:8px;margin-bottom:12px;overflow:hidden;position:relative;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+    <div style="position:absolute;top:0;right:0;background:#e8000e;color:#fff;font-size:9px;font-weight:700;letter-spacing:2px;padding:5px 12px;text-transform:uppercase;z-index:3">&#11088; RECOMENDADO</div>
+    <div style="height:90px;background:linear-gradient(135deg,#150000,#2a0000);position:relative;display:flex;align-items:center;padding:0 16px;overflow:hidden">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#e8000e"></div>
+      <div style="position:absolute;right:-5px;bottom:-5px;font-size:65px;opacity:.12">&#128081;</div>
+      <div style="position:relative;z-index:1">
+        <div style="font-size:9px;letter-spacing:3px;color:#e8000e;text-transform:uppercase;margin-bottom:3px">Dexter XIT &#8212; Painel</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:34px;color:#fff;line-height:.9">STARTER</div>
+        <div style="font-size:10px;color:#555;letter-spacing:1px;margin-top:4px;text-transform:uppercase">acesso permanente</div>
+      </div>
+    </div>
+    <div style="padding:14px 16px">
+      <ul style="list-style:none;margin-bottom:12px">
+        <li style="font-size:12px;color:#888;padding:3px 0;display:flex;align-items:center;gap:6px"><span style="color:#e8000e;font-weight:700">&#10003;</span>Principais pain&#233;is inclusos</li>
+        <li style="font-size:12px;color:#888;padding:3px 0;display:flex;align-items:center;gap:6px"><span style="color:#e8000e;font-weight:700">&#10003;</span>Mira otimizada para FF</li>
+        <li style="font-size:12px;color:#888;padding:3px 0;display:flex;align-items:center;gap:6px"><span style="color:#e8000e;font-weight:700">&#10003;</span>Suporte via WhatsApp</li>
+        <li style="font-size:12px;color:#888;padding:3px 0;display:flex;align-items:center;gap:6px"><span style="color:#e8000e;font-weight:700">&#10003;</span>Ativa&#231;&#227;o imediata</li>
+      </ul>
+      <div style="font-size:12px;color:#333;text-decoration:line-through;margin-bottom:2px">R&#36;19,90</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:#e8000e;line-height:1;margin-bottom:4px">R&#36;13,90</div>
+      <div style="background:rgba(0,230,118,.08);border:1px solid rgba(0,230,118,.2);color:#00e676;font-size:10px;font-weight:700;padding:3px 8px;border-radius:2px;display:inline-block;margin-bottom:12px;text-transform:uppercase">&#9854;&#65039; Permanente &#8212; pague uma vez</div>
+      <a href="https://pay.cakto.com.br/373hmso_898268" style="display:block;width:100%;background:#e8000e;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;padding:13px;border-radius:3px;text-align:center;text-decoration:none">QUERO O STARTER</a>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:10px">
+    <a href="https://dexterxits.github.io/Dexterxits" style="font-size:11px;color:#555;text-decoration:none;letter-spacing:1px">ver todos os planos &#8594;</a>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-brand">DEXTER <span>XIT</span></div>
+  <div class="footer-sub">&#169; 2025 Dexter XIT &#8212; Freefire Sensitivity Pack</div>
+</div>
+
+</div>
+
+<script>
+function enviar(){
+  var nome = document.getElementById('nome').value.trim();
+  var wpp = document.getElementById('wpp').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var celular = document.getElementById('celular').value.trim();
+
+  if(!nome || !wpp || !celular){
+    alert('Preencha seu nome, WhatsApp e modelo do celular!');
+    return;
+  }
+
+  var btn = document.getElementById('btnCapture');
+  btn.textContent = 'enviando...';
+  btn.style.background = '#555';
+
+  var msg = 'Ol%C3%A1%20Dexter!%20Quero%20minha%20config%20gr%C3%A1tis%20%F0%9F%94%A5%0A%0ANome%3A%20' + encodeURIComponent(nome) + '%0AWhatsApp%3A%20' + encodeURIComponent(wpp) + '%0AEmail%3A%20' + encodeURIComponent(email) + '%0ACelular%3A%20' + encodeURIComponent(celular);
+
+  setTimeout(function(){
+    window.open('https://wa.me/5511978806471?text=' + msg, '_blank');
+    window.location.href = 'https://dexterxits.github.io/Dexterxits';
+  }, 800);
+}
+
+var h=23,m=59,s=47;
+function tick(){
+  s--;
+  if(s<0){s=59;m--;}
+  if(m<0){m=59;h--;}
+  if(h<0){h=23;m=59;s=59;}
+  var hEl=document.getElementById('hours');
+  var mEl=document.getElementById('mins');
+  var sEl=document.getElementById('secs');
+  if(hEl)hEl.textContent=h<10?'0'+h:h;
+  if(mEl)mEl.textContent=m<10?'0'+m:m;
+  if(sEl)sEl.textContent=s<10?'0'+s:s;
+}
+setInterval(tick,1000);
+</script>
+</body>
+</html>
